@@ -1,0 +1,146 @@
+:root {
+  /* cores principais */
+  --primary-color: #c11;
+  --main-bg-color: #000;
+  --bg-color: #00000080;
+  --header-bg-color: #111;
+  /* scrollbar */
+  --scrollbar-color: #fff;
+
+  /* fonts */
+  --font-color: #aaa;
+  --font-color2: #fff;
+
+  /* cor botões */
+  --btn-color: #00000080;
+  --btn-color2: #fff;
+  /* 1rem = 16px (user agent) = 100% (user agente) */
+  font-size: 62.5%; /*10px ficou como padrão */
+}
+
+/* definições básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  /* intervalo de tamanho clamp(mini,padrão,max)*/
+  font-size: clamp(14px, 1.6rem, 2vw);
+}
+
+::-webkit-scrollbar {
+  width: 7px;
+  background-color: var(--main-bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-color);
+  border-radius: 10px;
+}
+body {
+  height: 100vh;
+  background-color: var(--main-bg-color);
+  color: var(--font-color2);
+  font-family: "Times New Roman", Times, Arial, sans-serif;
+}
+
+/* styles da navBar */
+header {
+  background-color: var(--header-bg-color);
+}
+.navBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.navLogo {
+  width: 100px;
+  height: 40px;
+  margin-left: 50px;
+  transition: transform 0.2s;
+}
+.navLogo:hover {
+  transform: scale(1.1);
+}
+
+.navBar nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+}
+
+.navBar nav ul li {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  text-transform: uppercase;
+  line-height: 1.4rem;
+}
+.navBar nav ul li:last-child {
+  margin-right: 50px;
+}
+.navBar nav ul li a {
+  color: var(--font-color);
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.navBar nav ul li a:hover {
+  color: var(--font-color2);
+}
+
+/* styles do Banner do site */
+
+.banner {
+  font-size: 1.7rem;
+  background: linear-gradient(var(--bg-color), var(--bg-color) 100%),
+    url("../images/capa-house.jpg");
+  height: 80vh;
+  background-size: cover;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.banner .description {
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.banner .title {
+  margin-top: 15%;
+  font-size: 5rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.banner .bannerInfoBtn {
+  display: flex;
+  flex-direction: row;
+}
+.banner .btn {
+  background-color: var(--btn-color);
+  border: none;
+  color: var(--font-color2);
+  padding: 15px 10px;
+  margin-right: 15px;
+  font-size: 1.2rem;
+
+  cursor: pointer;
+  transition: 0.3s ease all;
+}
+
+.banner .btn:hover {
+  background-color: var(--btn-color2);
+  color: var(--btn-color);
+}
+
+.banner .btn i {
+  margin-right: 8px;
+}
+.banner .bannerInfo {
+  margin-left: 50px;
+  width: 70%;
+}
