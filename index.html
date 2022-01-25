@@ -2,27 +2,41 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" href="/assets/images/favicon.ico" />
+    <link rel="icon" href="assets/images/favicon.ico" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/styles/styles.css" type="text/css" />
+    <link rel="stylesheet" href="assets/styles/styles.css" type="text/css" />
+
+    <!--responsive file link -->
+    <link rel="stylesheet" href="assets/styles/responsive.css" />
+
+    <!-- owl css -->
+    <link
+      rel="stylesheet"
+      href="assets/styles/owlCarousel/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="assets/styles/owlCarousel/owl.theme.default.min.css"
+    />
+
     <title>DFlix</title>
   </head>
   <body>
     <header>
       <div class="navBar">
-        <img class="navLogo" src="/assets/images/logo.png" alt="logo" />
+        <img class="navLogo" src="assets/images/logo.png" alt="logo" />
         <nav>
           <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Séries</a></li>
-            <li><a href="#">Filmes</a></li>
-            <li><a href="#">Documentários</a></li>
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#filmes">Filmes</a></li>
+            <li><a href="#series">Séries</a></li>
+            <li><a href="#documentario">Documentários</a></li>
           </ul>
         </nav>
       </div>
     </header>
-    <main>
+    <main id="home">
       <div class="banner">
         <div class="bannerInfo">
           <h3 class="title">HOUSE OF CARDS</h3>
@@ -43,11 +57,163 @@
           </div>
         </div>
       </div>
+      <div class="bannerFadeBottom"></div>
     </main>
-    <script src="/assets/js/script.js"></script>
+
+    <div id="filmes" class="carrousel">
+      <h3>Tendência agora</h3>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
+        </div>
+      </div>
+    </div>
+    <div class="carrousel">
+      <h3>Mais votado</h3>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="series" class="carrousel">
+      <h3>Séries</h3>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
+        </div>
+      </div>
+    </div>
+    <div id="documentario" class="carrousel">
+      <h3>Documentários</h3>
+      <div class="owl-carousel owl-theme">
+        <div class="item">
+          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
+        </div>
+        <div class="item">
+          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
+        </div>
+      </div>
+    </div>
+
+    <!--scrips -->
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/scroll.js"></script>
+
+    <!-- fontawesome scrips -->
     <script
       src="https://kit.fontawesome.com/71f8e373af.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- owl scrips -->
+    <script src="assets/js/owlCarousel/jquery.min.js"></script>
+    <script src="assets/js/owlCarousel/owl.carousel.min.js"></script>
+    <script src="assets/js/owlCarousel/setup.js"></script>
   </body>
 </html>
