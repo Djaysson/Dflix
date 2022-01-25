@@ -1,9 +1,9 @@
 :root {
   /* cores principais */
   --primary-color: #c11;
-  --main-bg-color: #000;
+  --main-bg-color: #000000;
   --bg-color: #00000080;
-  --header-bg-color: #111;
+  --header-bg-color: #0a0a0a;
   /* scrollbar */
   --scrollbar-color: #fff;
 
@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 
   /* intervalo de tamanho clamp(mini,padrão,max)*/
   font-size: clamp(14px, 1.6rem, 2vw);
@@ -45,6 +46,15 @@ body {
 
 /* styles da navBar */
 header {
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  padding: 15px 0px;
+  transition-timing-function: ease-in;
+  transition: all 0.5s;
+}
+header.active {
   background-color: var(--header-bg-color);
 }
 .navBar {
@@ -94,15 +104,29 @@ header {
 
 .banner {
   font-size: 1.7rem;
+
   background: linear-gradient(var(--bg-color), var(--bg-color) 100%),
     url("../images/capa-house.jpg");
-  height: 80vh;
+  height: 650px;
   background-size: cover;
+  object-fit: contain;
+  background-position: center center;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+}
+.bannerFadeBottom {
+  position: relative;
+  top: -50px;
+  height: 10rem;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 37, 37, 0.61),
+    rgba(17, 17, 17, 0.51)
+  );
 }
 
 .banner .description {
@@ -143,4 +167,32 @@ header {
 .banner .bannerInfo {
   margin-left: 50px;
   width: 70%;
+}
+
+/* carrousel */
+.carrousel {
+  width: 95%;
+  margin: 0 auto;
+}
+.carrousel h3 {
+  font-size: 2rem;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  margin: 5px 15px;
+  font-weight: bold;
+}
+.box-filmes {
+  object-fit: contain;
+  width: 100%;
+  max-height: 250px;
+  margin: 5px 0px;
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: var(--bg-color2);
+  background-color: var(--header-bg-color);
 }
