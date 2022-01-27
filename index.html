@@ -29,22 +29,18 @@
         <nav>
           <ul>
             <li><a href="#home">Inicio</a></li>
-            <li><a href="#filmes">Filmes</a></li>
-            <li><a href="#series">Séries</a></li>
-            <li><a href="#documentario">Documentários</a></li>
+            <li><a href="#movieList">Filmes</a></li>
+            <li><a href="#seriesList">Séries</a></li>
+            <li><a href="#documentaryList">Documentários</a></li>
           </ul>
         </nav>
       </div>
     </header>
     <main id="home">
-      <div class="banner">
+      <div id="banner">
         <div class="bannerInfo">
-          <h3 class="title">HOUSE OF CARDS</h3>
-          <p class="description">
-            Nada pode impedir o politico sem escrúpulos Frank Underwood de
-            Conquista Washington. Nada pode impedir o politico sem escrúpulos
-            Frank Underwood de Conquista Washington.
-          </p>
+          <h3 id="title"></h3>
+          <p id="description"></p>
           <div class="bannerInfoBtn">
             <button role="button" type="button" class="btn">
               <i class="fas fa-play"></i>
@@ -60,146 +56,29 @@
       <div class="bannerFadeBottom"></div>
     </main>
 
-    <div id="filmes" class="carrousel">
-      <h3>Tendência agora</h3>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
-        </div>
-      </div>
+    <div id="movieList" class="carrousel">
+      <h3 >Tendência agora</h3>
+      <div id="movie" class="owl-carousel owl-theme"></div>
     </div>
-    <div class="carrousel">
+    
+    <div  class="carrousel">
       <h3>Mais votado</h3>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
-        </div>
-      </div>
+      <div id="trending" class="owl-carousel owl-theme"></div>
     </div>
-    <div id="series" class="carrousel">
+    
+    <div id="seriesList" class="carrousel">
       <h3>Séries</h3>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
-        </div>
-      </div>
+      <div id="series" class="owl-carousel owl-theme"></div>
     </div>
-    <div id="documentario" class="carrousel">
-      <h3>Documentários</h3>
-      <div class="owl-carousel owl-theme">
-        <div class="item">
-          <img src="assets/images/mini1.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini2.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini3.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini4.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini5.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini6.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini7.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini8.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini9.jpg" class="box-filmes" alt="" />
-        </div>
-        <div class="item">
-          <img src="assets/images/mini10.jpg" class="box-filmes" alt="" />
-        </div>
-      </div>
+    
+    
+    <div id="documentaryList" class="carrousel">
+      <h3>documentários</h3>
+      <div id="documentary" class="owl-carousel owl-theme"></div>
     </div>
+    
+    </div>
+
     <footer>
       <p>Djayson Rodrigues &copy 2022</p>
     </footer>

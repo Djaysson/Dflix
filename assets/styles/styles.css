@@ -41,7 +41,7 @@ body {
   height: 100vh;
   background-color: var(--main-bg-color);
   color: var(--font-color2);
-  font-family: "Times New Roman", Times, Arial, sans-serif;
+  font-family: "Arial", Times, Arial, sans-serif;
 }
 
 /* styles da navBar */
@@ -50,7 +50,7 @@ header {
   top: 0;
   z-index: 9;
   width: 100%;
-  padding: 15px 0px;
+
   transition-timing-function: ease-in;
   transition: all 0.5s;
 }
@@ -62,7 +62,7 @@ header.active {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 0px;
+  padding: 13px 0px;
 }
 
 .navLogo {
@@ -91,22 +91,19 @@ header.active {
   margin-right: 50px;
 }
 .navBar nav ul li a {
-  color: var(--font-color);
+  color: var(--font-color2);
   text-decoration: none;
   transition: color 0.2s;
 }
 
 .navBar nav ul li a:hover {
-  color: var(--font-color2);
+  color: var(--font-color);
 }
 
 /* styles do Banner do site */
 
-.banner {
+#banner {
   font-size: 1.7rem;
-
-  background: linear-gradient(var(--bg-color), var(--bg-color) 100%),
-    url("../images/capa-house.jpg");
   height: 650px;
   background-size: cover;
   object-fit: contain;
@@ -129,22 +126,23 @@ header.active {
   );
 }
 
-.banner .description {
+#description {
+  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 40px;
 }
 
-.banner .title {
+#title {
   margin-top: 15%;
   font-size: 5rem;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
     "Lucida Sans", Arial, sans-serif;
 }
-.banner .bannerInfoBtn {
+.bannerInfoBtn {
   display: flex;
   flex-direction: row;
 }
-.banner .btn {
+.btn {
   background-color: var(--btn-color);
   border: none;
   color: var(--font-color2);
@@ -156,15 +154,15 @@ header.active {
   transition: 0.3s ease all;
 }
 
-.banner .btn:hover {
+.btn:hover {
   background-color: var(--btn-color2);
   color: var(--btn-color);
 }
 
-.banner .btn i {
+.btn i {
   margin-right: 8px;
 }
-.banner .bannerInfo {
+.bannerInfo {
   margin-left: 50px;
   width: 70%;
 }
