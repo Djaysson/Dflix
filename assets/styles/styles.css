@@ -62,7 +62,8 @@ header.active {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 13px 0px;
+  height: 70px;
+  padding: 30px 0px;
 }
 
 .navLogo {
@@ -91,6 +92,8 @@ header.active {
   margin-right: 50px;
 }
 .navBar nav ul li a {
+  display: block;
+  padding: 0.5rem;
   color: var(--font-color2);
   text-decoration: none;
   transition: color 0.2s;
@@ -98,6 +101,10 @@ header.active {
 
 .navBar nav ul li a:hover {
   color: var(--font-color);
+}
+
+#btnMobile {
+  display: none;
 }
 
 /* styles do Banner do site */
@@ -184,6 +191,7 @@ header.active {
   width: 100%;
   max-height: 250px;
   margin: 5px 0px;
+  cursor: pointer;
 }
 
 /* FOOTER */

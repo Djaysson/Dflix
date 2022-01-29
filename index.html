@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="assets/styles/styles.css" type="text/css" />
 
     <!--responsive file link -->
-    <link rel="stylesheet" href="assets/styles/responsive.css" />
 
+<link rel="stylesheet" href="assets/styles/responsive.css">
+ 
     <!-- owl css -->
+
     <link
       rel="stylesheet"
       href="assets/styles/owlCarousel/owl.carousel.min.css"
@@ -25,9 +27,12 @@
   <body>
     <header>
       <div class="navBar">
-        <img class="navLogo" src="assets/images/logo.png" alt="logo" />
-        <nav>
-          <ul>
+        <img  class="navLogo" src="assets/images/logo.png" alt="logo" />
+        <nav id="nav">
+          <button aria-label="Abrir Menu" type="button" id="btnMobile" aria-haspopup="true" aria-controls="menu" aria-expanded="false">
+            <span id="hamburger"></span>
+          </button>
+          <ul id="menu" role="menu" >
             <li><a href="#home">Inicio</a></li>
             <li><a href="#movieList">Filmes</a></li>
             <li><a href="#seriesList">Séries</a></li>
@@ -57,10 +62,10 @@
     </main>
 
     <div id="movieList" class="carrousel">
-      <h3 >Tendência agora</h3>
+      <h3>Tendência agora</h3>
       <div id="movie" class="owl-carousel owl-theme"></div>
     </div>
-    
+        
     <div  class="carrousel">
       <h3>Mais votado</h3>
       <div id="trending" class="owl-carousel owl-theme"></div>
@@ -68,7 +73,9 @@
     
     <div id="seriesList" class="carrousel">
       <h3>Séries</h3>
-      <div id="series" class="owl-carousel owl-theme"></div>
+      <div id="series" class="owl-carousel owl-theme">
+        
+      </div>
     </div>
     
     
@@ -82,19 +89,20 @@
     <footer>
       <p>Djayson Rodrigues &copy 2022</p>
     </footer>
-    <!--scrips -->
+
+    <script src="assets/js/menuResponsive.js"></script>
     <script src="assets/js/script.js"></script>
     <script src="assets/js/scroll.js"></script>
-
     <!-- fontawesome scrips -->
     <script
       src="https://kit.fontawesome.com/71f8e373af.js"
       crossorigin="anonymous"
     ></script>
-
     <!-- owl scrips -->
     <script src="assets/js/owlCarousel/jquery.min.js"></script>
     <script src="assets/js/owlCarousel/owl.carousel.min.js"></script>
     <script src="assets/js/owlCarousel/setup.js"></script>
+    <!--scrips -->
+   
   </body>
 </html>

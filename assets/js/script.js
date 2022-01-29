@@ -22,97 +22,137 @@ function truncate(str, n) {
 }
 
 // banner
-fetch(requests.fetchBannerImage)
-  .then((res) => res.json())
-  .then((data) => {
-    // a cada atualização o filme será alterado
-    const setMovie =
-      data.results[Math.floor(Math.random() * data.results.length - 1)];
-    var banner = document.getElementById("banner");
-    var banner_title = document.getElementById("title");
-    var banner__desc = document.getElementById("description");
-    banner.style.backgroundImage =
-      "url(" + img_url + setMovie.backdrop_path + ")";
-    banner__desc.innerText = truncate(setMovie.overview, 150);
-    banner_title.innerText = setMovie.name;
-  });
+const banner = async () => {
+  try {
+    const bannerImg = await fetch(requests.fetchBannerImage)
+      .then((res) => res.json())
+      .then((data) => {
+        // a cada atualização o filme será alterado
+        const setMovie =
+          data.results[Math.floor(Math.random() * data.results.length - 1)];
+        var banner = document.getElementById("banner");
+        var banner_title = document.getElementById("title");
+        var banner__desc = document.getElementById("description");
+        banner.style.backgroundImage =
+          "url(" + img_url + setMovie.backdrop_path + ")";
+        banner__desc.innerText = truncate(setMovie.overview, 150);
+        banner_title.innerText = setMovie.name;
+      });
 
+    return bannerImg;
+  } catch (err) {
+    console.log(err);
+  }
+};
+banner();
 //Tendência agora
-fetch(requests.fetchActionMovies)
-  .then((res) => res.json())
-  .then((data) => {
-    const carrousel = document.getElementById("movie");
+const actionMovies = async () => {
+  try {
+    const movies = await fetch(requests.fetchActionMovies)
+      .then((res) => res.json())
+      .then((data) => {
+        const carrousel = document.getElementById("movie");
 
-    data.results.forEach((movie) => {
-      const items = document.createElement("div");
-      items.className = "item";
-      items.classList.add("item");
-      carrousel.appendChild(items);
-      const poster = document.createElement("img");
-      poster.className = "box-filmes";
-      var s2 = movie.id;
-      poster.id = s2;
-      poster.src = img_url + movie.poster_path;
-      items.appendChild(poster);
-    });
-  });
-
+        data.results.forEach((movie) => {
+          const items = document.createElement("div");
+          items.className = "item";
+          items.classList.add("item");
+          carrousel.appendChild(items);
+          const poster = document.createElement("img");
+          poster.className = "box-filmes";
+          var s2 = movie.id;
+          poster.id = s2;
+          poster.src = img_url + movie.poster_path;
+          items.appendChild(poster);
+        });
+      });
+    return movies;
+  } catch (err) {
+    console.log(err);
+  }
+};
+actionMovies();
 //Mais votado
-fetch(requests.fetchTrending)
-  .then((res) => res.json())
-  .then((data) => {
-    const carrousel = document.getElementById("trending");
+const maisVotado = async () => {
+  try {
+    const trending = await fetch(requests.fetchTrending)
+      .then((res) => res.json())
+      .then((data) => {
+        const carrousel = document.getElementById("trending");
 
-    data.results.forEach((movie) => {
-      const items = document.createElement("div");
-      items.className = "item";
-      items.classList.add("item");
-      carrousel.appendChild(items);
-      const poster = document.createElement("img");
-      poster.className = "box-filmes";
-      var s2 = movie.id;
-      poster.id = s2;
-      poster.src = img_url + movie.poster_path;
-      items.appendChild(poster);
-    });
-  });
+        data.results.forEach((movie) => {
+          const items = document.createElement("div");
+          items.className = "item";
+          items.classList.add("item");
+          carrousel.appendChild(items);
+          const poster = document.createElement("img");
+          poster.className = "box-filmes";
+          var s2 = movie.id;
+          poster.id = s2;
+          poster.src = img_url + movie.poster_path;
+          items.appendChild(poster);
+        });
+      });
+    return trending;
+  } catch (err) {
+    console.log(err);
+  }
+};
+maisVotado();
 
 //Séries
-fetch(requests.fetchSeries)
-  .then((res) => res.json())
-  .then((data) => {
-    const carrousel = document.getElementById("series");
+const series = async () => {
+  try {
+    const seriesImg = await fetch(requests.fetchSeries)
+      .then((res) => res.json())
+      .then((data) => {
+        const carrousel = document.getElementById("series");
 
-    data.results.forEach((movie) => {
-      const items = document.createElement("div");
-      items.className = "item";
-      items.classList.add("item");
-      carrousel.appendChild(items);
-      const poster = document.createElement("img");
-      poster.className = "box-filmes";
-      var s2 = movie.id;
-      poster.id = s2;
-      poster.src = img_url + movie.poster_path;
-      items.appendChild(poster);
-    });
-  });
-
+        data.results.forEach((movie) => {
+          const items = document.createElement("div");
+          items.className = "item";
+          items.classList.add("item");
+          carrousel.appendChild(items);
+          const poster = document.createElement("img");
+          poster.className = "box-filmes";
+          var s2 = movie.id;
+          poster.id = s2;
+          poster.src = img_url + movie.poster_path;
+          items.appendChild(poster);
+        });
+      });
+    return seriesImg;
+  } catch (err) {
+    console.log(err);
+  }
+};
+series();
 //documentários
-fetch(requests.fetchDocumentaries)
-  .then((res) => res.json())
-  .then((data) => {
-    const carrousel = document.getElementById("documentary");
 
-    data.results.forEach((movie) => {
-      const items = document.createElement("div");
-      items.className = "item";
-      items.classList.add("item");
-      carrousel.appendChild(items);
-      const poster = document.createElement("img");
-      poster.className = "box-filmes";
-      var s2 = movie.id;
-      poster.id = s2;
-      poster.src = img_url + movie.poster_path;
-      items.appendChild(poster);
-    });
-  });
+const documentario = async () => {
+  try {
+    const doc = await fetch(requests.fetchDocumentaries)
+      .then((res) => res.json())
+      .then((data) => {
+        const carrousel = document.getElementById("documentary");
+
+        data.results.forEach((movie) => {
+          const items = document.createElement("div");
+          items.className = "item";
+          items.classList.add("item");
+          carrousel.appendChild(items);
+          const poster = document.createElement("img");
+          poster.className = "box-filmes";
+          var s2 = movie.id;
+          poster.id = s2;
+          poster.src = img_url + movie.poster_path;
+          items.appendChild(poster);
+        });
+      });
+    return doc;
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+documentario();
